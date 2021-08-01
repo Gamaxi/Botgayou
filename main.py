@@ -447,15 +447,14 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-"""
-   Heroku manager for your userbot
-"""
+from pyrogram import Client, Filters
 
-import heroku3
-from userbot import CMD_HELP
-from userbot.uniborgConfig import Config
-
-# ================= 
-
-Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
+from pyrobot import (
+    COMMAND_HAND_LER,
+    HEROKU_API_KEY,
+    LOGGER,
+REPO_REMOTE_NAME = "tmp_upstream_remote"
+IFFUCI_ACTIVE_BRANCH_NAME = "master"
+DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
+NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 
