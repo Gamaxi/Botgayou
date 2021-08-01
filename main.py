@@ -446,13 +446,13 @@ async def play(ctx, url):
 
 # _________________________________________________________________________________
 
-from bot import HEROKU_API_KEY, HEROKU_APP_NAME
 
-# Implement by https://github.com/jusidama18
-# Setting Message
-# Implement by https://github.com/jusidama18 and Based on this https://github.com/DevsExpo/FridayUserbot/blob/master/plugins/heroku_helpers.py
+server_source_directory_name = 'react_server'
+heroku_server_directory_name = 'heroku_server'
+local_server_directory_name = 'local_server'
+task_directory_name = 'task'
 
-heroku_client = None
-if HEROKU_API_KEY:
-    heroku_client = heroku3.from_key(HEROKU_API_KEY)
+server_process = None
+
+heroku_url = 'https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli'
 
