@@ -4,9 +4,7 @@ import youtube_dl
 import asyncio
 import time
 import os
-from dotenv import load_dotenv
 
-load_dotenv(dotenv_path="config")
 
 
 intents = discord.Intents.default()
@@ -449,4 +447,4 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-bot.run(os.getenv('TOKEN'))
+bot.run(process.env.TOKEN)
