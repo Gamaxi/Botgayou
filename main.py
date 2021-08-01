@@ -447,12 +447,15 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-server_source_directory_name = 'react_server'
-heroku_server_directory_name = 'heroku_server'
-local_server_directory_name = 'local_server'
-task_directory_name = 'task'
+"""
+   Heroku manager for your userbot
+"""
 
-server_process = None
+import heroku3
+from userbot import CMD_HELP
+from userbot.uniborgConfig import Config
 
-heroku_url = 'https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli'
+# ================= 
+
+Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 
