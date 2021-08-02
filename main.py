@@ -447,10 +447,9 @@ async def play(ctx, url):
 
 # _________________________________________________________________________________
 
+import heroku3
 
+api_key = ENV.HEROKU_API_KEY
 
-bot.run(local('heroku config:set DJANGO_SECRET_KEY="{}" --remote {}'.format(create_secret_key(), env.environment))
-    local('heroku config:set DJANGO_AWS_ACCESS_KEY_ID={} --remote {}'
-          .format(env.aws_access, env.environment))
-    local('heroku config:set DJANGO_AWS_SECRET_ACCESS_KEY={} --remote {}')
+bot.run(api_key)
 
