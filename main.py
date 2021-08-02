@@ -4,6 +4,7 @@ import youtube_dl
 import asyncio
 import time
 import os
+import heroku3
 
 
 
@@ -447,14 +448,11 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-from pyrogram import Client, Filters
-
-from pyrobot import (
-    COMMAND_HAND_LER,
-    HEROKU_API_KEY,
-    LOGGER,
-REPO_REMOTE_NAME = "tmp_upstream_remote"
-IFFUCI_ACTIVE_BRANCH_NAME = "master"
-DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
+config["authorization_strings"] = data
+    config["heroku_api_token"] = key
+    if api_token is not None:
+        config["api_id"] = api_token.ID
+def get_app(authorization_strings, key, api_token=None, create_new=True, full_match=False):
+    heroku = heroku3.from_key(key)
+    app = None
 
