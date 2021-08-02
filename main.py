@@ -448,6 +448,6 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-HEROKU_AUTH_TOKEN = os.environ.get("HEROKU_AUTH_TOKEN", "")
-bot.run(HEROKU_AUTH_TOKEN)
+
+bot.run(os.environ.get("HEROKU_AUTH_TOKEN", "TOKEN"))
 
