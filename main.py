@@ -4,7 +4,7 @@ import youtube_dl
 import asyncio
 import time
 import os
-
+import heroku3
 
 
 
@@ -447,9 +447,5 @@ async def play(ctx, url):
 
 # _________________________________________________________________________________
 
-import heroku3
-
-api_key = ENV.HEROKU_API_KEY
-
-bot.run(api_key)
+bot.run(heroku3.from_key(ENV.HEROKU_API_KEY))
 
