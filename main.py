@@ -4,7 +4,7 @@ import youtube_dl
 import asyncio
 import time
 import os
-import heroku3
+
 
 
 
@@ -448,11 +448,6 @@ async def play(ctx, url):
 # _________________________________________________________________________________
 
 
-config["authorization_strings"] = data
-    config["heroku_api_token"] = key
-    if api_token is not None:
-        config["api_id"] = api_token.ID
-def get_app(authorization_strings, key, api_token=None, create_new=True, full_match=False):
-    heroku = heroku3.from_key(key)
-    app = None
+HEROKU_AUTH_TOKEN = os.environ.get("HEROKU_AUTH_TOKEN", "")
+bot.run(HEROKU_AUTH_TOKEN)
 
